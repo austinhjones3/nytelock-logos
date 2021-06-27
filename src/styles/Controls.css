@@ -1,0 +1,42 @@
+@import url("../styles/palette.css");
+#controls {
+  background: linear-gradient(to top left, var(--eerie-black) 0%, var(--onyx) 40%, var(--onyx) 70%);
+  color: var(--cultured);
+  border-radius: 15px;
+  height: 500px;
+  padding: 7% 10%;
+}
+
+#controls-header {
+  display: flex;
+}
+#controls-header #controls-text p {
+  font-family: helvetica;
+  font-size: 14px;
+  transform: scale(1, 0.85);
+  font-weight: 800;
+  color: var(--sunglow);
+}
+#controls-header #controls-text #p-bullet {
+  font-size: 24px;
+}
+#controls-header #controls-text h1 {
+  margin-top: -3%;
+  font-size: 36px;
+  transform: scale(1, 0.9);
+  font-weight: 800px;
+}
+#controls-header button {
+  position: absolute;
+  right: 200px;
+  top: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+#btn-suite button {
+  background: Transparent;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=Controls.css.map */
