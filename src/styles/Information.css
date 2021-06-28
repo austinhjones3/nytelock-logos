@@ -12,8 +12,9 @@
   color: var(--baby-gray);
 }
 #info #info-logos {
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
+  padding-top: 50px;
 }
 #info .logo-img {
   border: solid 1px #e6e6e6;

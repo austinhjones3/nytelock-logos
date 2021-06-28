@@ -7,7 +7,9 @@ export default function Information({ info }) {
     <div id="info" className="row">
       <div className="col-6">
         <h2>{info.title}</h2>
-        <div id="info-para">{info.para}</div>
+        <div className="mt-3" id="info-para">
+          {info.para}
+        </div>
       </div>
       <div className="col-6 d-flex" id="info-logos">
         {info.logos.map((logo) => (

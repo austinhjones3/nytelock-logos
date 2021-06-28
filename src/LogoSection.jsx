@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import Controls from "./components/Controls";
 import Information from "./components/Information";
-import hbo from "./images/hbo.png";
-import ibm from "./images/ibm.png";
-import nasa from "./images/nasa.png";
+import { letter } from "./components/data";
+
 export default function LogoSection() {
   const [info, setInfo] = useState(letter);
 
@@ -19,20 +18,3 @@ export default function LogoSection() {
     </div>
   );
 }
-
-const letter = {
-  title: "Lettermark Logos",
-  para: (
-    <>
-      <p>
-        A Monogram or lettermark is a typography-based logo that's comprised of a few
-        letters, usually a company's initials. The lettermark is all about simplicity
-      </p>
-      <p>
-        By utilizing just a few letters, lettermark logos are effective at
-        streamlining any company brand if they have a long name.
-      </p>
-    </>
-  ),
-  logos: [hbo, ibm, nasa],
-};
