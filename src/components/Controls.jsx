@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Controls.css";
 import { SiWix } from "react-icons/si";
 import { FaRedditAlien, FaFootballBall, FaPuzzlePiece } from "react-icons/fa";
@@ -6,11 +6,19 @@ import { CgFormatItalic } from "react-icons/cg";
 import { AiFillChrome } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import { letter, word, picture, abstract, mascot, combo } from "./data";
+import $ from "jquery";
 
 export default function Controls({ setInfo }) {
   const [active, setActive] = useState("letter");
-  function changeActive({ target }) {
-    setActive(() => target.id);
+
+  useEffect(changeActive, [active]);
+  function changeActive() {
+    const clickedButton = $(`#${active}`);
+    const buttons = $("#btn-suite > button");
+    for (let btn of buttons) {
+      $(btn).removeClass("selected");
+    }
+    clickedButton.addClass("selected");
   }
 
   return (
@@ -35,10 +43,9 @@ export default function Controls({ setInfo }) {
       <div id="btn-suite">
         <button
           id="letter"
-          className={active === "letter" && "selected"}
-          onClick={(event) => {
+          onClick={() => {
             setInfo(() => letter);
-            changeActive(event);
+            setActive(() => "letter");
           }}
         >
           <div className="btn-content">
@@ -52,9 +59,10 @@ export default function Controls({ setInfo }) {
         </button>
         <button
           id="word"
-          onClick={(event) => {
+          z
+          onClick={() => {
             setInfo(() => word);
-            changeActive(event);
+            setActive(() => "word");
           }}
         >
           <div className="btn-content ">
@@ -68,9 +76,9 @@ export default function Controls({ setInfo }) {
         </button>
         <button
           id="picture"
-          onClick={(event) => {
+          onClick={() => {
             setInfo(() => picture);
-            changeActive(event);
+            setActive(() => "picture");
           }}
         >
           <div className="btn-content">
@@ -84,9 +92,9 @@ export default function Controls({ setInfo }) {
         </button>
         <button
           id="abstract"
-          onClick={(event) => {
+          onClick={() => {
             setInfo(() => abstract);
-            changeActive(event);
+            setActive(() => "abstract");
           }}
         >
           <div className="btn-content">
@@ -100,9 +108,9 @@ export default function Controls({ setInfo }) {
         </button>
         <button
           id="mascot"
-          onClick={(event) => {
+          onClick={() => {
             setInfo(() => mascot);
-            changeActive(event);
+            setActive(() => "mascot");
           }}
         >
           <div className="btn-content">
@@ -116,9 +124,9 @@ export default function Controls({ setInfo }) {
         </button>
         <button
           id="combo"
-          onClick={(event) => {
+          onClick={() => {
             setInfo(() => combo);
-            changeActive(event);
+            setActive(() => "combo");
           }}
         >
           <div className="btn-content">

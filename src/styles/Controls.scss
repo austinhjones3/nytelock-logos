@@ -100,9 +100,9 @@
         transition: color 0.25s;
       }
     }
-    transition: background-color 0.1s;
-    transition-property: text-decoration, text-decoration-color, color;
-    transition-duration: 0.25s;
+    transition-property: background-color, text-decoration, text-decoration-color,
+      color;
+    transition-duration: 0.1s, 0.4s;
     &:active,
     &:hover {
       color: var(--eerie-black);
@@ -116,10 +116,10 @@
   }
 }
 
-.selected {
+#btn-suite .selected {
   color: var(--eerie-black);
-  background-color: (--cultured);
-  .icon {
+  background-color: var(--cultured);
+  svg {
     color: var(--eerie-black);
   }
 }

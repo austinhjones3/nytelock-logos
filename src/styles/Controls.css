@@ -76,9 +76,8 @@
   color: var(--cultured);
   width: 150px;
   height: 150px;
-  transition: background-color 0.1s;
-  transition-property: text-decoration, text-decoration-color, color;
-  transition-duration: 0.25s;
+  transition-property: background-color, text-decoration, text-decoration-color, color;
+  transition-duration: 0.1s, 0.4s;
 }
 #btn-suite button .btn-content {
   font-size: 14px;
@@ -104,11 +103,11 @@
   color: var(--eerie-black);
 }
 
-.selected {
+#btn-suite .selected {
   color: var(--eerie-black);
-  background-color: --cultured;
+  background-color: var(--cultured);
 }
-.selected .icon {
+#btn-suite .selected svg {
   color: var(--eerie-black);
 }
 
