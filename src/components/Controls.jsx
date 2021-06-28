@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Controls.css";
 import { SiWix } from "react-icons/si";
 import { FaRedditAlien, FaFootballBall, FaPuzzlePiece } from "react-icons/fa";
@@ -8,7 +8,10 @@ import { BsArrowRight } from "react-icons/bs";
 import { letter, word, picture, abstract, mascot, combo } from "./data";
 
 export default function Controls({ setInfo }) {
-  function changeActive({ target }) {}
+  const [active, setActive] = useState("letter");
+  function changeActive({ target }) {
+    setActive(() => target.id);
+  }
 
   return (
     <div id="controls">
@@ -31,6 +34,8 @@ export default function Controls({ setInfo }) {
       </div>
       <div id="btn-suite">
         <button
+          id="letter"
+          className={active === "letter" && "selected"}
           onClick={(event) => {
             setInfo(() => letter);
             changeActive(event);
@@ -46,6 +51,7 @@ export default function Controls({ setInfo }) {
           </div>
         </button>
         <button
+          id="word"
           onClick={(event) => {
             setInfo(() => word);
             changeActive(event);
@@ -61,6 +67,7 @@ export default function Controls({ setInfo }) {
           </div>
         </button>
         <button
+          id="picture"
           onClick={(event) => {
             setInfo(() => picture);
             changeActive(event);
@@ -76,6 +83,7 @@ export default function Controls({ setInfo }) {
           </div>
         </button>
         <button
+          id="abstract"
           onClick={(event) => {
             setInfo(() => abstract);
             changeActive(event);
@@ -91,6 +99,7 @@ export default function Controls({ setInfo }) {
           </div>
         </button>
         <button
+          id="mascot"
           onClick={(event) => {
             setInfo(() => mascot);
             changeActive(event);
@@ -106,6 +115,7 @@ export default function Controls({ setInfo }) {
           </div>
         </button>
         <button
+          id="combo"
           onClick={(event) => {
             setInfo(() => combo);
             changeActive(event);
