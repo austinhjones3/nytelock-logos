@@ -4,14 +4,13 @@
   color: var(--cultured);
   border-radius: 15px;
   height: 500px;
-  padding: 7% 10%;
+  padding: 9% 10% 7% 10%;
 }
 
 #controls-header {
   display: flex;
 }
 #controls-header #controls-text p {
-  font-family: helvetica;
   font-size: 14px;
   transform: scale(1, 0.85);
   font-weight: 800;
@@ -28,15 +27,67 @@
 }
 #controls-header button {
   position: absolute;
-  right: 200px;
-  top: 150px;
+  right: 210px;
+  top: 180px;
   height: 40px;
+  width: 150px;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#controls-header button #contact-us {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+#controls-header button #circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-top: -3.5px;
+  margin-right: -7.5px;
+  background: var(--cultured);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#btn-suite {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
 #btn-suite button {
   background: Transparent;
+  border: 0.2px solid var(--baby-gray);
   border-radius: 15px;
+  color: var(--cultured);
+  width: 150px;
+  height: 150px;
+}
+#btn-suite button .btn-content {
+  font-size: 14px;
+  font-weight: 800;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0;
+  margin-top: -15%;
+}
+#btn-suite button .btn-content .icon {
+  font-size: 40px;
+  margin-bottom: -3%;
+  color: var(--sunglow);
+}
+#btn-suite button:active, #btn-suite button:hover {
+  color: var(--eerie-black);
+  text-decoration: underline;
+  text-decoration-color: var(--sunglow);
+  background-color: var(--cultured);
+}
+#btn-suite button:active .icon, #btn-suite button:hover .icon {
+  color: var(--eerie-black);
 }
 
 /*# sourceMappingURL=Controls.css.map */
