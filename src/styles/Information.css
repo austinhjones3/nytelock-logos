@@ -13,9 +13,7 @@
 }
 #info #info-logos {
   align-items: center;
-  position: absolute;
-  bottom: 125px;
-  left: 750px;
+  justify-content: space-evenly;
 }
 #info .logo-img {
   border: solid 1px #e6e6e6;

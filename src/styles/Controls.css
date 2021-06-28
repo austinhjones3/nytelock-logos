@@ -9,6 +9,7 @@
 
 #controls-header {
   display: flex;
+  justify-content: space-between;
 }
 #controls-header #controls-text p {
   font-size: 14px;
@@ -25,12 +26,14 @@
   transform: scale(1, 0.9);
   font-weight: 800px;
 }
+#controls-header #controls-contact {
+  padding-top: 25px;
+  padding-right: 10px;
+}
 #controls-header button {
-  position: absolute;
-  right: 210px;
-  top: 180px;
   height: 40px;
   width: 150px;
+  background-color: var(--sunglow);
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -98,6 +101,14 @@
   background-color: var(--cultured);
 }
 #btn-suite button:active .icon, #btn-suite button:hover .icon {
+  color: var(--eerie-black);
+}
+
+.selected {
+  color: var(--eerie-black);
+  background-color: --cultured;
+}
+.selected .icon {
   color: var(--eerie-black);
 }
 
