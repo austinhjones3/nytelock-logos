@@ -10,15 +10,10 @@ import $ from "jquery";
 
 export default function Controls({ setInfo }) {
   const [active, setActive] = useState("letter");
-
   useEffect(changeActive, [active]);
   function changeActive() {
-    const clickedButton = $(`#${active}`);
-    const buttons = $("#btn-suite > button");
-    for (let btn of buttons) {
-      $(btn).removeClass("selected");
-    }
-    clickedButton.addClass("selected");
+    $(".selected").removeClass("selected");
+    $(`#${active}`).addClass("selected");
   }
 
   return (
