@@ -1,4 +1,7 @@
+@import url("./palette.css");
+
 body {
   margin: 0;
   font-family: helvetica;
+  color: var(--eerie-black);
 }

@@ -1,4 +1,4 @@
-@import url("../styles/palette.css");
+@import url("./palette.css");
 #controls {
   background: linear-gradient(to top left, var(--eerie-black) 0%, var(--onyx) 40%, var(--onyx) 70%);
   color: var(--cultured);
@@ -35,7 +35,14 @@
   display: flex;
   justify-content: space-between;
 }
+#controls-header button:hover #contact-us {
+  color: var(--cultured);
+  text-decoration: underline;
+  text-decoration-color: var(--cultured);
+}
 #controls-header button #contact-us {
+  transition-property: color, text-decoration, text-decoration-color;
+  transition-duration: 0.05s;
   font-weight: 600;
   font-size: 14px;
   margin-top: 4px;
@@ -66,6 +73,9 @@
   color: var(--cultured);
   width: 150px;
   height: 150px;
+  transition: background-color 0.1s;
+  transition-property: text-decoration, text-decoration-color, color;
+  transition-duration: 0.25s;
 }
 #btn-suite button .btn-content {
   font-size: 14px;
@@ -79,6 +89,7 @@
   font-size: 40px;
   margin-bottom: -3%;
   color: var(--sunglow);
+  transition: color 0.25s;
 }
 #btn-suite button:active, #btn-suite button:hover {
   color: var(--eerie-black);

@@ -2,5 +2,26 @@
 #info {
   padding: 3% 10%;
 }
+#info h2 {
+  font-weight: 800;
+  transform: scale(1, 0.85);
+  font-size: 2.2rem;
+}
+#info #info-para {
+  margin-right: 50px;
+  color: var(--baby-gray);
+}
+#info #info-logos {
+  align-items: center;
+  position: absolute;
+  bottom: 125px;
+  left: 750px;
+}
+#info .logo-img {
+  border: solid 1px #e6e6e6;
+  width: 140px;
+  margin-left: 10px;
+  height: 140px;
+}
 
 /*# sourceMappingURL=Information.css.map */

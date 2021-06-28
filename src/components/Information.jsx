@@ -1,6 +1,24 @@
 /* eslint-disable default-case */
 import React, { Component } from "react";
 import "../styles/Information.css";
+import adidas from "../images/adidas.png";
+import apple from "../images/apple.png";
+import bk from "../images/bk.png";
+import bp from "../images/bp.png";
+import coke from "../images/coke.png";
+import doritos from "../images/doritos.png";
+import google from "../images/google.png";
+import hbo from "../images/hbo.png";
+import ibm from "../images/ibm.png";
+import kfc from "../images/kfc.png";
+import koolaid from "../images/koolaid.png";
+import lacoste from "../images/lacoste.png";
+import nasa from "../images/nasa.png";
+import peanut from "../images/peanut.png";
+import pepsi from "../images/pepsi.png";
+import target from "../images/target.png";
+import twitter from "../images/twitter.png";
+import visa from "../images/visa.png";
 export default class Information extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +46,7 @@ export default class Information extends Component {
             </p>
           </>
         );
-        logos = [];
+        logos = [hbo, ibm, nasa];
         break;
       }
       case active === "word": {
@@ -43,7 +61,7 @@ export default class Information extends Component {
             strong brand recognition.
           </p>
         );
-        logos = [];
+        logos = [visa, coke, google];
         break;
       }
       case active === "picture": {
@@ -65,7 +83,7 @@ export default class Information extends Component {
             </p>
           </>
         );
-        logos = [];
+        logos = [apple, twitter, target];
         break;
       }
       case active === "abstract": {
@@ -87,7 +105,7 @@ export default class Information extends Component {
             </p>
           </>
         );
-        logos = [];
+        logos = [bp, pepsi, adidas];
         break;
       }
       case active === "mascot": {
@@ -107,7 +125,7 @@ export default class Information extends Component {
             </p>
           </>
         );
-        logos = [];
+        logos = [koolaid, kfc, peanut];
         break;
       }
       case active === "combo": {
@@ -127,7 +145,7 @@ export default class Information extends Component {
             </p>
           </>
         );
-        logos = [];
+        logos = [doritos, bk, lacoste];
       }
     }
     return {
@@ -142,12 +160,12 @@ export default class Information extends Component {
     return (
       <div id="info" className="row">
         <div className="col-6">
-          <h2 id="info-title">{title}</h2>
+          <h2>{title}</h2>
           <div id="info-para">{para}</div>
         </div>
-        <div className="col-6" id="info-logos">
+        <div className="col-6 d-flex" id="info-logos">
           {logos.map((logo) => (
-            <logo />
+            <img src={logo} alt="logo" className="logo-img" />
           ))}
         </div>
       </div>
